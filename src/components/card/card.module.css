@@ -1,0 +1,53 @@
+.card {
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.content h3 {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.content p {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.content span {
+  font-size: 0.5rem;
+  font-weight: 400;
+  display: block;
+}
+
+.btn {
+  border-radius: 5px;
+  color: #ffead0;
+  padding: 0 0.75rem;
+  width: max-content;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.simple {
+  background-color: #e17654;
+}
