@@ -2,9 +2,9 @@ import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import About from "./pages/About.jsx";
-import Vans from "./pages/Vans.jsx";
-import Van from "./pages/Van.jsx";
+import About from "./pages/about/About.jsx";
+import Vans from "./pages/vans/Vans.jsx";
+import Van from "./pages/van/Van.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>

@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
-import About from "../../pages/About";
-import Vans from "../../pages/Vans";
+import About from "../../pages/about/About";
+import Vans from "../../pages/vans/Vans";
 const header = () => {
   return (
     <header className={styles.header}>
