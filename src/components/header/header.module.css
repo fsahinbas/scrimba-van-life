@@ -8,7 +8,9 @@
 .logo {
   font-size: 1.5rem;
   line-height: 2.5rem;
-  font-weight: 600;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
 }
 
 .nav {
