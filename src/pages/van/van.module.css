@@ -1,0 +1,69 @@
+.van {
+  padding: 1.5rem;
+}
+
+.badge {
+  border-radius: 5px;
+  color: #ffead0;
+  padding: 0 0.75rem;
+  width: max-content;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.title {
+  font-size: 1.75rem;
+  line-height: 1.75rem;
+  color: #161616;
+  margin: 0.5rem 0;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.price span {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #161616;
+}
+
+.back {
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: #4d4d4d;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.header img {
+  width: 12px;
+  margin-bottom: 0;
+}
+
+.btn {
+  background-color: #ff8c38;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  margin-block: 1.5rem 4rem;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}

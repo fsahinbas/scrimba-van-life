@@ -13,7 +13,7 @@ const Vans = () => {
   const renderVans = vans && vans.map((van) => <Card key={van.id} {...van} />);
   return (
     <>
-      <h1>Explore our van options</h1>
+      <h1 className={styles.title}>Explore our van options</h1>
       <div className={styles.filters}>
         <div className={styles.filter}>Simple</div>
         <div className={styles.filter}>Luxury</div>
