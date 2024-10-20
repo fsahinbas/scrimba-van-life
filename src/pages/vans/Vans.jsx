@@ -10,8 +10,19 @@ const Vans = () => {
       .then((data) => setVans(data.vans));
   }, []);
 
-  const renderVans = vans && vans.map((van) => <Card key={van.id} />);
-  return <div className={styles.vans}>{renderVans}</div>;
+  const renderVans = vans && vans.map((van) => <Card key={van.id} {...van} />);
+  return (
+    <>
+      <h1>Explore our van options</h1>
+      <div className={styles.filters}>
+        <div className={styles.filter}>Simple</div>
+        <div className={styles.filter}>Luxury</div>
+        <div className={styles.filter}>Rugged</div>
+        <a href="#">Clear filters</a>
+      </div>
+      <div className={styles.vans}>{renderVans}</div>
+    </>
+  );
 };
 
 export default Vans;
