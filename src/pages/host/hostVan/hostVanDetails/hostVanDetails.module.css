@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.image {
+  width: 10rem;
+}
+
+.badge {
+  border-radius: 5px;
+  color: #ffead0;
+  padding: 0 0.75rem;
+  width: max-content;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  color: #161616;
+  margin-inline: 0;
+}
+
+.price {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  color: #161616;
+  font-weight: 700;
+}
+
+.price span {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #161616;
+  font-weight: 400;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.content h1 {
+  margin-block: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.header img {
+  width: 12px;
+  margin-bottom: 0;
+}
+
+.back {
+  font-size: 0.875rem;
+  text-decoration: none;
+  text-decoration-line: underline;
+  color: #4d4d4d;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.link,
+.active {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.link:hover,
+.active {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  color: #161616;
+}

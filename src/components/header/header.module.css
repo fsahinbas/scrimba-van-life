@@ -19,7 +19,8 @@
   gap: 0.75rem;
 }
 
-.link {
+.link,
+.active {
   text-decoration: none;
   color: #4d4d4d;
   font-size: 1rem;
@@ -27,7 +28,8 @@
   font-weight: 500;
 }
 
-.link:hover {
+.link:hover,
+.active {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;

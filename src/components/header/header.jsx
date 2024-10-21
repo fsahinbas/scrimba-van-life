@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./header.module.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import About from "../../pages/about/About";
 import Vans from "../../pages/vans/Vans";
 import Dashboard from "../../pages/host/dashboard/Dashboard";
@@ -11,15 +11,27 @@ const header = () => {
         #VANLIFE
       </Link>
       <nav className={styles.nav}>
-        <Link to="/host" element={<Dashboard />} className={styles.link}>
+        <NavLink
+          to="/host"
+          element={<Dashboard />}
+          className={({ isActive }) => (isActive ? styles.active : styles.link)}
+        >
           Host
-        </Link>
-        <Link to="/about" element={<About />} className={styles.link}>
+        </NavLink>
+        <NavLink
+          to="/about"
+          element={<About />}
+          className={({ isActive }) => (isActive ? styles.active : styles.link)}
+        >
           About
-        </Link>
-        <Link to="/vans" element={<Vans />} className={styles.link}>
+        </NavLink>
+        <NavLink
+          to="/vans"
+          element={<Vans />}
+          className={({ isActive }) => (isActive ? styles.active : styles.link)}
+        >
           Vans
-        </Link>
+        </NavLink>
       </nav>
     </header>
   );

@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./pages/home/Home";
-import Server from "./server";
+import "./server";
 function App() {
   return (
     <>

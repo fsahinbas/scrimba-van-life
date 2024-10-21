@@ -1,0 +1,12 @@
+.main {
+  background-color: #fff7ed;
+  padding: 1.5rem;
+}
+
+.title {
+  margin-inline: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2rem;
+  color: #161616;
+}
