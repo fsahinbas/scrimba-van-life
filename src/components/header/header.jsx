@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import About from "../../pages/about/About";
 import Vans from "../../pages/vans/Vans";
 import Dashboard from "../../pages/host/dashboard/Dashboard";
-const header = () => {
+const Header = () => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
@@ -37,4 +37,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
