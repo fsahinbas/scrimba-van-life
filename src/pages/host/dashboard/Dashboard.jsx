@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import styles from "./Dashboard.module.css";
+import styles from "./dashboard.module.css";
 const Dashboard = () => {
   return (
     <>
