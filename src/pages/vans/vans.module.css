@@ -18,7 +18,8 @@
 .filters {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 1rem;
   padding: 1rem 1.5rem;
   margin-bottom: 1rem;
 }
@@ -32,11 +33,28 @@
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
+  border: none;
+  outline: none;
 }
 
-.filters a {
+.filters .clear {
   font-size: 0.75rem;
   text-decoration: none;
   text-decoration-line: underline;
   color: #4d4d4d;
+  border: none;
+  outline: none;
+}
+
+.filter.simple:hover {
+  background-color: #e17654;
+  color: #fff;
+}
+.filter.luxury:hover {
+  background-color: #161616;
+  color: #fff;
+}
+.filter.rugged:hover {
+  background-color: #115e59;
+  color: #fff;
 }
