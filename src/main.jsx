@@ -15,6 +15,7 @@ import HostVanInfo from "./pages/host/hostVan/hostVanInfo/HostVanInfo.jsx";
 import HostVanDetails from "./pages/host/hostVan/hostVanDetails/HostVanDetails.jsx";
 import HostVanPricing from "./pages/host/hostVan/hostVanPricing/HostVanPricing.jsx";
 import HostVanPhotos from "./pages/host/hostVan/hostVanPhotos/HostVanPhotos.jsx";
+import NotFound from "./pages/notFound/NotFound.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -43,6 +44,7 @@ createRoot(document.getElementById("root")).render(
             <Route path="photos" element={<HostVanPhotos />} />
           </Route>
         </Route>
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   </BrowserRouter>
