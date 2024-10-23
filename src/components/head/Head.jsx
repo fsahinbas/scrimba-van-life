@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./headerr.module.css";
+import styles from "./head.module.css";
 import { Link, NavLink } from "react-router-dom";
 import About from "../../pages/about/About";
 import Vans from "../../pages/vans/Vans";
 import Dashboard from "../../pages/host/dashboard/Dashboard";
-const Headerr = () => {
+const Head = () => {
   return (
     <header className={styles.header}>
       <Link to="/" className={styles.logo}>
@@ -37,4 +37,4 @@ const Headerr = () => {
   );
 };
 
-export default Headerr;
+export default Head;
