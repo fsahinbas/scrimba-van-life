@@ -1,7 +1,10 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
+import { useLocation, useParams, Link } from "react-router-dom";
 import styles from "./van.module.css";
 const Van = () => {
+  const location = useLocation();
+  const search = location.state?.search || "";
+  const type = location.state?.type || "all";
   const [van, setVan] = React.useState(null);
   const { id } = useParams();
   React.useEffect(() => {
@@ -14,8 +17,8 @@ const Van = () => {
     <div className={styles.van}>
       <header className={styles.header}>
         <img src="../../assets/images/arrow.png" />
-        <Link to="/vans" className={styles.back}>
-          Back to all vans
+        <Link to={`/vans?${search}`} className={styles.back}>
+          Back to {type} vans
         </Link>
       </header>
       <img src={van.imageUrl} alt={van.name} />

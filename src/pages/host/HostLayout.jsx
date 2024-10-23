@@ -3,7 +3,6 @@ import { NavLink, Outlet } from "react-router-dom";
 import styles from "./hostLayout.module.css";
 
 const HostLayout = () => {
-  const activeStyle = { fontWeight: "bold", textDecoration: "underline" };
   return (
     <main className={styles.main}>
       <nav className={styles.nav}>
@@ -11,28 +10,28 @@ const HostLayout = () => {
           to="."
           end
           className={styles.link}
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+          style={({ isActive }) => (isActive ? styles.active : null)}
         >
           Dashboard
         </NavLink>
         <NavLink
           to="income"
           className={styles.link}
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+          style={({ isActive }) => (isActive ? styles.active : null)}
         >
           Income
         </NavLink>
         <NavLink
           to="vans"
           className={styles.link}
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+          style={({ isActive }) => (isActive ? styles.active : null)}
         >
           Vans
         </NavLink>
         <NavLink
           to="reviews"
           className={styles.link}
-          style={({ isActive }) => (isActive ? activeStyle : null)}
+          style={({ isActive }) => (isActive ? styles.active : null)}
         >
           Reviews
         </NavLink>
