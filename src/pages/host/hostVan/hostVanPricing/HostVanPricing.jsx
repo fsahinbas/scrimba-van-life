@@ -5,7 +5,10 @@ const HostVanPricing = () => {
   const { van } = useOutletContext();
   return (
     <section>
-      <p>${van.price}/day</p>
+      <p className={styles.price}>
+        ${van.price}
+        <span>/day</span>
+      </p>
     </section>
   );
 };

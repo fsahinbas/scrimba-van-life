@@ -6,7 +6,7 @@ const HostVanPhotos = () => {
   const { van } = useOutletContext();
   return (
     <section>
-      <img src={van.imageUrl} alt={van.name} />
+      <img src={van.imageUrl} alt={van.name} className={styles.image} />
     </section>
   );
 };

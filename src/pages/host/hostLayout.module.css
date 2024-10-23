@@ -1,5 +1,7 @@
 .main {
-  background-color: #fff7ed;
+  background-color: #fff;
+  padding: 1.5rem;
+  min-height: calc(100vh - 176px);
 }
 .nav {
   display: flex;
