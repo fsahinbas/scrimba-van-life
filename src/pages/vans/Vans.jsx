@@ -2,19 +2,35 @@ import React from "react";
 import styles from "./vans.module.css";
 import Card from "../../components/card/Card";
 import { useSearchParams } from "react-router-dom";
+import { getVans } from "../../api";
 
 const Vans = () => {
   const [vans, setVans] = React.useState(null);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
   const [searchParams, setSearhParams] = useSearchParams();
 
+  const loadVans = async () => {
+    setLoading(true);
+    try {
+      const data = await getVans();
+      setVans(data);
+    } catch (err) {
+      setError(err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   React.useEffect(() => {
-    fetch("/api/vans")
-      .then((res) => res.json())
-      .then((data) => setVans(data.vans));
+    loadVans();
   }, []);
 
-  if (!vans) {
+  if (loading) {
     return <h2>Loading...</h2>;
+  }
+  if (error) {
+    return <h2>There was an error: {error.message}</h2>;
   }
   const filteredVans = searchParams.get("type")
     ? vans.filter((van) => van.type === searchParams.get("type"))
