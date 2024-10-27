@@ -16,6 +16,8 @@ import HostVanDetails from "./pages/host/hostVan/hostVanDetails/HostVanDetails.j
 import HostVanPricing from "./pages/host/hostVan/hostVanPricing/HostVanPricing.jsx";
 import HostVanPhotos from "./pages/host/hostVan/hostVanPhotos/HostVanPhotos.jsx";
 import NotFound from "./pages/notFound/NotFound.jsx";
+import Login from "./pages/login/Login.jsx";
+import AuthRequired from "./components/AuthRequired.jsx";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -30,18 +32,20 @@ createRoot(document.getElementById("root")).render(
         </Route> */}
         <Route path="/vans" element={<Vans />} />
         <Route path="/vans/:id" element={<Van />} />
+        <Route path="login" element={<Login />} />
 
         {/* There is no any shared UI, so nested routers are not needed here. But if we try to create nested routes, it should be like above*/}
-
-        <Route path="/host" element={<HostLayout />}>
-          <Route index element={<Dashboard />} />
-          <Route path="income" element={<Income />} />
-          <Route path="vans" element={<HostVans />} />
-          <Route path="reviews" element={<Reviews />} />
-          <Route path="vans/:id" element={<HostVanDetails />}>
-            <Route index element={<HostVanInfo />} />
-            <Route path="pricing" element={<HostVanPricing />} />
-            <Route path="photos" element={<HostVanPhotos />} />
+        <Route element={<AuthRequired />}>
+          <Route path="/host" element={<HostLayout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="income" element={<Income />} />
+            <Route path="vans" element={<HostVans />} />
+            <Route path="reviews" element={<Reviews />} />
+            <Route path="vans/:id" element={<HostVanDetails />}>
+              <Route index element={<HostVanInfo />} />
+              <Route path="pricing" element={<HostVanPricing />} />
+              <Route path="photos" element={<HostVanPhotos />} />
+            </Route>
           </Route>
         </Route>
         <Route path="*" element={<NotFound />} />

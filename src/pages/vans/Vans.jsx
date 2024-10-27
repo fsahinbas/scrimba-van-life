@@ -27,10 +27,10 @@ const Vans = () => {
   }, []);
 
   if (loading) {
-    return <h2>Loading...</h2>;
+    return <h2 aria-live="polite">Loading...</h2>;
   }
   if (error) {
-    return <h2>There was an error: {error.message}</h2>;
+    return <h2 aria-live="assertive">There was an error: {error.message}</h2>;
   }
   const filteredVans = searchParams.get("type")
     ? vans.filter((van) => van.type === searchParams.get("type"))

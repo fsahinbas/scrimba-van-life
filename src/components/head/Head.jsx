@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import About from "../../pages/about/About";
 import Vans from "../../pages/vans/Vans";
 import Dashboard from "../../pages/host/dashboard/Dashboard";
+import avatar from "/assets/images/avatar.png";
 const Head = () => {
   return (
     <header className={styles.header}>
@@ -31,6 +32,9 @@ const Head = () => {
           className={({ isActive }) => (isActive ? styles.active : styles.link)}
         >
           Vans
+        </NavLink>
+        <NavLink to={"/login"}>
+          <img src={avatar} alt="avatar" className={styles.avatar} />
         </NavLink>
       </nav>
     </header>

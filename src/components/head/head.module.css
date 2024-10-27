@@ -15,7 +15,7 @@
 
 .nav {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 0.75rem;
 }
 
@@ -34,4 +34,8 @@
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
   color: #161616;
+}
+
+.avatar {
+  margin: 0;
 }
